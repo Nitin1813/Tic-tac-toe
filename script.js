@@ -2,7 +2,16 @@ function reset(){
     // var button = document.getElementsByTagName('button');
     // document.addEventListener('onclick', function(){
         document.querySelectorAll('button').forEach(function (button){
-            button.disabled = false;
+            b1 = document.getElementById('11').innerHTML = 1;
+            b2 = document.getElementById('12').innerHTML = 2;
+            b3 = document.getElementById('13').innerHTML = 3;
+            b4 = document.getElementById('21').innerHTML = 4;
+            b5 = document.getElementById('22').innerHTML = 5;
+            b6 = document.getElementById('23').innerHTML = 6;
+            b7 = document.getElementById('31').innerHTML = 7;
+            b8 = document.getElementById('32').innerHTML = 8;
+            b9 = document.getElementById('33').innerHTML = 9;
+        button.disabled = false;
         })
     // })
 }
@@ -167,3 +176,17 @@ document.addEventListener('DOMContentLoaded', function (){
 })
 
 
+
+
+// flex-flow: column-reverse wrap;
+// justify-content:center;
+// align-self:end
+
+// align-items:end;
+// flex-flow: column-reverse wrap;
+// justify-content:center;
+// align-content:space-between;
+
+// flex-direction:row-reverse;
+// flex-wrap:wrap;
+// align-content:space-between;
