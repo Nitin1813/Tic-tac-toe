@@ -1,3 +1,11 @@
+function reset(){
+    // var button = document.getElementsByTagName('button');
+    // document.addEventListener('onclick', function(){
+        document.querySelectorAll('button').forEach(function (button){
+            button.disabled = false;
+        })
+    // })
+}
 var x = 1  ;
 var Text = "X";
 var b1 = document.getElementById('11');
@@ -56,10 +64,106 @@ document.addEventListener('DOMContentLoaded', function (){
 
 
 document.addEventListener('DOMContentLoaded', function (){
+    var num1 = 0;
+    var bu = 0;
+    var symbol = 0;
     document.querySelectorAll('.button').forEach(function (button){
         button.onclick = function (){
-            var bu = document.q
-            document.getElementById('input')
+            
+            bu = button.innerHTML;
+            // console.log(bu);
+            if(bu == '/' || bu == '*' || bu == '-' || bu == '+' || bu == '=' || bu == 'C'){
+                if(bu == 'C'){
+                    document.getElementById('input').value = '';
+                    num1 = 0;
+                }else if(bu == '+'){
+                    if(num1 != 0){
+                        let result = parseFloat(document.getElementById('input').value);
+                        result += parseFloat(num1);
+                        document.getElementById('input').value = '';
+                        num1 = result;
+                        // document.getElementById('input').value = '';
+                    }else{
+                    num1 = document.getElementById('input').value;
+                    symbol = bu;
+                    console.log(symbol)
+                    // console.log(num1);
+                    document.getElementById('input').value = '';
+                    }
+                }else if(bu == '='){
+                    // console.log(num1);
+                    let num2 = document.getElementById('input').value;
+                    console.log(num2);
+                    console.log(num1)
+                    console.log(symbol)
+                    // console.log(num1);
+                    // console.log(num2);
+                    if(symbol == '+'){
+                    let result = parseFloat(num1) + parseFloat(num2);
+                    document.getElementById('input').value = result;
+                    symbol = 0;
+                    num1 = 0;
+                    }else if(symbol == '-'){
+                        let result = parseFloat(num1) - parseFloat(num2);
+                    document.getElementById('input').value = result;
+                    symbol = 0;
+                    num1 = 0;
+                    }else if(symbol == '*'){
+                        let result = parseFloat(num1) * parseFloat(num2);
+                    document.getElementById('input').value = result;
+                    symbol = 0;
+                    num1 = 0;
+                    }else if(symbol == '/'){
+                        let result = parseFloat(num1) / parseFloat(num2);
+                    document.getElementById('input').value = result;
+                    symbol = 0;
+                    num1 = 0;
+                    }
+                }else if(bu == '-'){
+                    if(num1 != 0){
+                    let result = parseFloat(document.getElementById('input').value);
+                    result -= parseFloat(num1);
+                    document.getElementById('input').value = '';
+                        num1 = result;
+                    }else{
+                        num1 = document.getElementById('input').value;
+                        document.getElementById('input').value = '';
+                        symbol = '-';
+                    }
+
+                }else if(bu == '*'){
+                    if(num1 != 0){
+                        let result = parseFloat(document.getElementById('input').value);
+                        result = result * parseFloat(num1);
+                        document.getElementById('input').value = '';
+                        num1 = result;
+                        }else{
+                            num1 = document.getElementById('input').value;
+                            document.getElementById('input').value = '';
+                            symbol = '*';
+                        }
+                }else if(bu == '/'){
+                    if(num1 != 0){
+                        let result = parseFloat(document.getElementById('input').value);
+                        result = result / parseFloat(num1);
+                        document.getElementById('input').value = '';
+                        num1 = result;
+                        }else{
+                            num1 = document.getElementById('input').value;
+                            document.getElementById('input').value = '';
+                            symbol = '/';
+                        }
+                }
+                // num1 = document.getElementById('input').value;
+                // document.getElementById('result').value = num1; 
+            }else{
+                var m =document.getElementById('input').value;
+                m += bu;
+            document.getElementById('input').value = m;
+
+            }
         }
     })
 })
+
+
