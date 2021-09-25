@@ -26,9 +26,9 @@ Tic Tac Toe is a game called (zero kata) in hindi and attached calculator with i
   
 ## Demo
 
-https://nitin1813.github.io/Portfolio/
+https://nitin1813.github.io/Tic-tac-toe/
 
-https://jovial-villani-e8a60a.netlify.app
+https://determined-wiles-2f00fa.netlify.app/
 
 
 
