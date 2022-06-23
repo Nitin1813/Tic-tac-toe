@@ -2,7 +2,7 @@
 # Hi, I'm Nitin! 👋
 
 
-# Tic-Tac-Toe
+# Tic-Tac-Toe | Calculator
 
 Tic Tac Toe is a game called (zero kata) in hindi and attached calculator with it.
 
